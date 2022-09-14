@@ -1,6 +1,5 @@
-FROM python:3.8-slim-buster
+FROM python:bullseye
 
 WORKDIR /app
 
-RUN python3 -m pip install --upgrade pip && \
-    python -m pip download docker docker-compose --dest .
+RUN pip download ansible
