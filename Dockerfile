@@ -2,7 +2,9 @@ FROM python:bullseye
 
 WORKDIR /app
 
-ADD downloadpython.py /app
+ADD downloadpython.sh /app
+
+RUN sh downloadpython.sh
 
 RUN pip download pip --no-deps --no-binary=:all:
 
