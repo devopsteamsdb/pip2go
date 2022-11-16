@@ -2,6 +2,8 @@ FROM python:bullseye
 
 WORKDIR /app
 
+ADD downloadpython.py /app
+
 RUN pip download pip --no-deps --no-binary=:all:
 
 RUN pip download ansible
