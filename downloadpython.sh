@@ -1,5 +1,6 @@
 url='https://www.python.org/ftp/python/'
 
+
 curl --silent "$url" |
     sed -n 's!.*href="\([0-9]\+\.[0-9]\+\.[0-9]\+\)/".*!\1!p' |
     sort -rV |
