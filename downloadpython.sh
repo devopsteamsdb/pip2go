@@ -6,7 +6,7 @@ curl --silent "$url" |
 while read -r version; do
     filename="Python-$version.tgz"
     # Versions which only have alpha, beta, or rc releases will fail here.
-    # Stop when we find one with a final release
+    # Stop when we find one with a final release.
     if curl --fail --silent -O "$url/$version/$filename"; then
         echo "$filename"
         break
