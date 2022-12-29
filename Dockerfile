@@ -1,10 +1,10 @@
-FROM python:bullseye
+FROM python:3.10-bullseye
 
 WORKDIR /app
 
-ADD downloadpython.sh /app
+#ADD downloadpython.sh /app
 
-RUN sh downloadpython.sh
+#RUN sh downloadpython.sh
 
 RUN pip download pip --no-deps --no-binary=:all:
 
