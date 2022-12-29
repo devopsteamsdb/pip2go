@@ -8,6 +8,8 @@ WORKDIR /app
 
 RUN pip download pip --no-deps --no-binary=:all:
 
+RUN pip download setuptools
+
 RUN pip download ansible
 
 RUN pip install ansible
