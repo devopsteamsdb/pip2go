@@ -6,7 +6,7 @@ ADD downloadpython.sh /app
 
 RUN sh downloadpython.sh
 
-RUN pip download pip setuptools setuptools-rust semantic-version typing-extensions rust wheel flit-core cython pywinrm pywinrm[kerberos] requests-kerberos pyvmomi paramiko ansible-pylibssh passlib netapp-lib ansible --no-binary=:all:
+RUN pip download pip setuptools wheel pywinrm pywinrm[kerberos] requests-kerberos pyvmomi paramiko ansible-pylibssh passlib netapp-lib ansible --platform  manylinux_2_17_x86_64 --only-binary=:all:
 
 RUN pip install ansible
 
