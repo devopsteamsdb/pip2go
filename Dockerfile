@@ -6,7 +6,7 @@ ADD downloadpython.sh /app
 
 RUN sh downloadpython.sh
 
-RUN pip download pip setuptools wheel ansible --no-binary=:all:
+RUN pip download pip setuptools wheel flit-core ansible --no-binary=:all:
 
 RUN pip install ansible
 
