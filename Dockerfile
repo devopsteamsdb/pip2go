@@ -6,9 +6,7 @@ ADD downloadpython.sh /app
 
 RUN sh downloadpython.sh
 
-RUN pip download pip setuptools wheel ansible ansible-core cffi cryptography jinja2 markupsafe packaging pycparser resolvelib pywinrm pywinrm[kerberos] requests-kerberos pyvmomi paramiko ansible-pylibssh passlib netapp-lib --platform  manylinux_2_17_x86_64 --only-binary=:all:
-
-RUN pip download pyyaml --no-binary=:all:
+RUN pip download ansible ansible-core ansible-pylibssh bcrypt certifi cffi chardet cryptography docker idna jinja2 jmespath lxml markupsafe netapp-lib ntlm-auth packaging paramiko passlib pip pycparser pykerberos pynacl pyparsing pyvmomi pywinrm pyyaml requests requests-kerberos requests-ntlm resolvelib setuptools six urllib3 websocket-client xmljson xmltodict --no-binary=:all:
 
 RUN pip install ansible
 
